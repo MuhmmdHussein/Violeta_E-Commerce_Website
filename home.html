@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Violeta</title>
+</head>
+
+
+<!-- <input type="text" id="searchInput" oninput="searchProducts()" placeholder="Search products...">
+        <button id="searchButton" onclick="searchProducts()">Search</button> -->
+
+
+<body class="body">
+
+    <div class="header-content ">
+        <div class="logo">
+            <a href="home.html" class="text-decoration-none text-light"> Violeta </a>
+        </div>
+        <nav class="position-relative ">
+            <a href="./login.html" class="">Log in</a>
+            <a href="./registration.html" class="">Sign Up</a>
+            <a href="./home.html" class="">Home</a>
+            <div class=" cartdropdownMenu ">
+                <i id="carticon" class="fas fa-cart-plus"></i>
+                <span id="notificication" class="position-absolute cartnumber"></span>
+                <div class="cartdropdown">
+                    <div></div>
+                    <a class="viewAll" href="cart.html">View All Products</a>
+                </div>
+            </div>
+            <a href="./contactus.html" class="">Contact US</a>
+            <a href="./about_us.html">About Us</a>
+        </nav>
+    </div>
+
+
+    <div class="searchinput">
+        <div class="center fs-1"> The Quality You Deserve! </div>
+        <br>
+        <br>
+        <input type="text" id="searchInput" class=" text-center" placeholder=" Discover Our Products...">
+        <button id="searchBtn" onclick="searchByTitle()">Search</button>
+        <br>
+        <br>
+        <br>
+        <!-- ===================== Catagories========================= -->
+
+        <div>
+            <button class="category-btn">All</button>
+            <button class="category-btn">men's clothing</button>
+            <button class="category-btn">jewelery</button>
+            <button class="category-btn">electronics</button>
+            <button class="category-btn">women's clothing</button>
+
+        </div>
+
+
+
+
+        <!-- Container for Search Results -->
+        <div id="searchResults"></div>
+        <!-- Container for Products -->
+        <div id="prodSearch"></div>
+    </div>
+
+    <img src="" class="" alt="">
+
+
+    <div id="Products" class="text-center">
+        <div id="product-item " class="">
+            <div id="product-des">
+            </div>
+            <div id="product-actions" class="">
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+    <script src="./registration.js"></script>
+</body>
+
+</html>

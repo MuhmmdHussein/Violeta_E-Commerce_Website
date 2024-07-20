@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- <div class="container">
+        <form action="" method="get">
+            <h2>User Login</h2>
+            <label for="username">Username :</label>
+            <input type="text" name="username" id="inputUsername" placeholder="Enter your name" required>
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="UserPassword1" placeholder="Enter your pasword" required>
+            <label for="password">Confirm Password :</label>
+            <input type="password" name="password" id="UserPassword2" placeholder="Enter your password" required>
+            <div class="contlab">
+                <label for="vehicle1" class="cheklab"> Remember Me</label><br>
+                <input type="checkbox" class="checkme" name="checkme" value=" abdo" id="checkme" onchange="storeData()">
+            </div>
+            <button type="submit" onclick="submitPage()">Register</button>
+        </form>
+    </div> -->
+
+    <div class="container">
+        <form action="" method="get">
+            <h2>User Log In</h2>
+            <label for="username">Username :</label>
+            <input type="text" name="username" id="inputUsername" placeholder="Enter your name"  onblur="checkinputUsername()" required>
+            <span id="valid1"></span>
+           
+            <span id="valid2"></span>
+            <span id="valid3"></span>
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="firstPassword" placeholder="Enter your password" required>
+            <label for="password">Confirm Password :</label>
+            <input type="password" name="password" id="secondPassword" onblur="checkinputPassword()" placeholder="Confirm your pasword" required>
+            <span id="valid4"></span>
+            <button id="regBtn" type="submit" >Log In</button>
+        </form>
+    </div>
+    <div class="backgroundImage">
+        
+    </div>
+
+
+
+
+
+    <script src="login.js"></script>
+</body>
+</html>

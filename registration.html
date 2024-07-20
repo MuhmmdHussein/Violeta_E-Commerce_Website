@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <h2>User Registration</h2>
+            <label for="username">Username :</label>
+            <input type="text" name="username" id="inputUsername" placeholder="Enter your name"
+                onblur="checkinputUsername()" required>
+            <span id="valid1"></span>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="inputEmail" placeholder="Enter your email" onblur="checkinputEmail()"
+                required>
+            <span id="valid2"></span>
+            <label for="birthday">Birthday :</label>
+            <input type="date" id="birthday" name="birthday">
+            <label for="phone">Enter a phone number :</label>
+            <input type="tel" id="inputPhone" name="inputPhone" placeholder="123-45-678" onblur="checkinputPhone()"
+                required>
+            <span id="valid3"></span>
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="firstPassword" placeholder="Enter your password" required>
+            <label for="password">Confirm Password :</label>
+            <input type="password" name="password" id="secondPassword" onblur="checkinputPassword()"
+                placeholder="Confirm your pasword" required>
+            <span id="valid4"></span>
+            <button id="regBtn" type="submit">Register</button>
+            <p> Already have an Account? </p>
+            <a href="./login.html">Login In</a>
+    </div>
+    <div class="backgroundImage">
+
+    </div>
+    <script src="registration.js"></script>
+</body>
+
+</html>

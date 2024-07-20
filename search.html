@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+</head>
+<body>
+    <h1>Product Search</h1>
+
+    <!-- Search Input -->
+    <input type="text" id="searchInput" placeholder="Search by title...">
+    <button onclick="searchByTitle()">Search</button>
+
+    <!-- Container for Search Results -->
+    <div id="searchResults"></div>
+
+    <!-- Container for Products -->
+    <div id="Products"></div>
+
+    <script>
+function searchByTitle() {
+    let searchQuery = document.getElementById("searchInput").value.toLowerCase();
+    let foundProducts = [];
+    for (let i = 0; i < productsArray.length; i++) {
+        if (productsArray[i].title.toLowerCase().includes(searchQuery)) {
+            foundProducts.push(productsArray[i]);
+        }
+    }
+    displaySearchResults(foundProducts);
+}
+
+function displaySearchResults(products) {
+    let searchResultsContainer = document.getElementById("searchResults");
+    searchResultsContainer.innerHTML = ''; // Clear previous search results
+    if (products.length > 0) {
+        for (let product of products) {
+            searchResultsContainer.innerHTML += `
+                <div id="search-result-item">
+                    <img src="${product.image}" alt="${product.title}">
+                    <h2>${product.title}</h2>
+                    <span>$${product.price}</span>
+                    <button id="searchBtn1" onclick="saveItemData(${product.id})">Add To Cart</button>
+                    <a href="./cart.Details.html"><button class="searchBtn2">More Details</button></a>
+                </div>`;
+        }
+    } else {
+        searchResultsContainer.innerHTML = "<p>No products found for the search query.</p>";
+    }
+}
+
+// Example usage:
+// Uncomment the following line if you want to trigger the search on a button click or similar event.
+document.getElementById("searchButton").addEventListener("click", searchByTitle);    </script>
+</body>
+</html>
